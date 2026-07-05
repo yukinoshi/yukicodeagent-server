@@ -1,0 +1,48 @@
+{
+  "name": "server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "tsx ./bin/www.ts",
+    "dev": "nodemon --exec tsx ./bin/www.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "@babel/parser": "^8.0.0",
+    "@babel/traverse": "^8.0.0",
+    "@babel/types": "^8.0.0",
+    "@langchain/core": "^1.2.1",
+    "@langchain/langgraph": "^1.4.7",
+    "@langchain/openai": "^1.5.3",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "ali-oss": "^6.23.0",
+    "cookie-parser": "~1.4.7",
+    "cors": "^2.8.6",
+    "debug": "^4.4.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "fast-glob": "^3.3.3",
+    "http-errors": "~2.0.1",
+    "langchain": "^1.5.2",
+    "morgan": "~1.11.0",
+    "multer": "^2.2.0",
+    "server": "link:",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/ali-oss": "^6.23.3",
+    "@types/babel__traverse": "^7.28.0",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/cors": "^2.8.19",
+    "@types/debug": "^4.1.13",
+    "@types/express": "^5.0.6",
+    "@types/http-errors": "^2.0.5",
+    "@types/morgan": "^1.9.10",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^26.1.0",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3"
+  }
+}
