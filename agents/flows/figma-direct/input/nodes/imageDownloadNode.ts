@@ -12,7 +12,7 @@
  * 下游: astParserNode (传递替换后的 rawCode)
  */
 
-import { batchUploadImagesToOSS } from "../../../../../utils/oss.js";
+import { batchUploadImagesToOSS } from "../../../../../utils/oss.js"
 
 /**
  * 规范化图片变量名
