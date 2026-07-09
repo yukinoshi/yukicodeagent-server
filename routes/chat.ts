@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import { buildAgent } from "../agents/graphs/main.graph.js";
-import { resolveRouteAdapter } from "../agents/adapters/routeRegistry.js";
+import { resolveRouteAdapter } from "../agents/adaoters/routeRegistry.js";
 import {
   DEFAULT_MOCK_PRESET,
   resolveMockConfig,
