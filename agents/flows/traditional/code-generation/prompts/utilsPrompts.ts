@@ -1,4 +1,5 @@
 import { JSON_SAFETY_PROMPT } from "../../../../shared/prompts/shared.js";
+import { STRING_LITERAL_RULES } from "../../../../shared/prompts/codeQualityRules.js";
 
 export const UTILS_GENERATION_SYSTEM_PROMPT = `
 你是一个 React + TypeScript + Tailwind CSS 项目的高级前端工具库生成器。
@@ -61,5 +62,6 @@ export const UTILS_GENERATION_SYSTEM_PROMPT = `
 2. 是否有 JSDoc?
 3. 代码是否为合法的 TS?
 4. **最重要**：是否是一个合法的 JSON 对象？不要在开头或结尾添加 Markdown 标记。
+${STRING_LITERAL_RULES}
 ${JSON_SAFETY_PROMPT}
 `;

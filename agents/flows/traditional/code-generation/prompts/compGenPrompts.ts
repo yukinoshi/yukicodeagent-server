@@ -1,5 +1,5 @@
 import { JSON_SAFETY_PROMPT } from "../../../../shared/prompts/shared.js";
-import { DEFENSIVE_RENDERING_RULES, NULL_SAFETY_RULES } from "../../../../shared/prompts/codeQualityRules.js";
+import { DEFENSIVE_RENDERING_RULES, NULL_SAFETY_RULES, STRING_LITERAL_RULES } from "../../../../shared/prompts/codeQualityRules.js";
 
 export const COMP_GEN_SYSTEM_PROMPT = `
 你是一位资深的高级前端工程师，专注于构建高质量、生产级、无障碍的 React UI 组件。
@@ -348,6 +348,7 @@ export default function RecentNovels({ novels, onNovelClick }: RecentNovelsProps
 - Props 类型定义使用 interface，放在组件上方
 - 使用 \`export default function ComponentName\` 导出
 - 类型从 \`../types/\` 相对路径导入
+${STRING_LITERAL_RULES}
 ${DEFENSIVE_RENDERING_RULES}
 ${NULL_SAFETY_RULES}
 ${JSON_SAFETY_PROMPT}

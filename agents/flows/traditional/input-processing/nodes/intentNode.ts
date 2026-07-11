@@ -1,4 +1,4 @@
-import { IntentSchema } from "../schemas/intentSchema.js";
+import { IntentSchema, fixIntentAssumptions } from "../schemas/intentSchema.js";
 import { IntentPrompts } from "../prompts/intentPrompts.js";
 import { getStructuredModel } from "../../../../utils/model.js";
 import { tryExecuteMock } from "../../../../utils/mock.js";
@@ -60,8 +60,11 @@ export async function intentNode(state: any) {
   // console.log("Intent Result:", JSON.stringify(result, null, 2));
   console.log("--- User Intent Analysis End ---");
 
-  // 5. 返回结果
+  // 5. 后处理：修复 LLM 返回的字符串数组问题
+  const fixedResult = fixIntentAssumptions(result);
+
+  // 6. 返回结果
   return {
-    intent: result,
+    intent: fixedResult,
   };
 }

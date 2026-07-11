@@ -1,5 +1,5 @@
 import { JSON_SAFETY_PROMPT } from "../../../../shared/prompts/shared.js";
-import { MOCK_DATA_RULES } from "../../../../shared/prompts/codeQualityRules.js";
+import { MOCK_DATA_RULES, STRING_LITERAL_RULES } from "../../../../shared/prompts/codeQualityRules.js";
 
 export const MOCK_DATA_SYSTEM_PROMPT = `
 你是一个资深的前端数据工程师。你的任务是进行【模拟数据生成 (Mock Data Generation)】。
@@ -142,6 +142,7 @@ export const MOCK_DATA_SYSTEM_PROMPT = `
     }
   ]
 }
+${STRING_LITERAL_RULES}
 ${MOCK_DATA_RULES}
 ${JSON_SAFETY_PROMPT}
 `;

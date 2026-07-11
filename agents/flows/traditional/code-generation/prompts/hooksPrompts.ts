@@ -1,5 +1,5 @@
 import { JSON_SAFETY_PROMPT } from "../../../../shared/prompts/shared.js";
-import { NULL_SAFETY_RULES } from "../../../../shared/prompts/codeQualityRules.js";
+import { NULL_SAFETY_RULES, STRING_LITERAL_RULES } from "../../../../shared/prompts/codeQualityRules.js";
 
 export const HOOKS_SYSTEM_PROMPT = `
 你是一个资深的前端架构师。你的任务是进行【React Hooks 封装代码生成 (Custom Hooks Generation)】。
@@ -190,6 +190,7 @@ export function useReadingNote(id: string) {
 - 所有 fetch 操作都包装成 useCallback
 - 使用 setTimeout 模拟网络延迟 (200-300ms)
 - **Service 返回值必须做空值处理**: \`setData(result ?? [])\` 或 \`setData(result ?? null)\`
+${STRING_LITERAL_RULES}
 ${NULL_SAFETY_RULES}
 ${JSON_SAFETY_PROMPT}
 `;

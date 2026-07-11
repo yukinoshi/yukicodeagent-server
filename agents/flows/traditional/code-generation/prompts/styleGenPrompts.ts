@@ -1,4 +1,5 @@
 import { JSON_SAFETY_PROMPT } from "../../../../shared/prompts/shared.js";
+import { STRING_LITERAL_RULES } from "../../../../shared/prompts/codeQualityRules.js";
 
 export const STYLE_GEN_SYSTEM_PROMPT = `
 你是一个资深的前端样式架构师。你的任务是进行【全局样式生成 (Global Styles Generation)】。
@@ -199,5 +200,6 @@ body {
 ✅ 包含至少一个布局容器类
 ✅ 包含至少一个动画定义
 ✅ 代码精简，在 100-200 行之间
+${STRING_LITERAL_RULES}
 ${JSON_SAFETY_PROMPT}
 `;

@@ -1,4 +1,5 @@
 import { JSON_SAFETY_PROMPT } from "../../../../shared/prompts/shared.js";
+import { STRING_LITERAL_RULES } from "../../../../shared/prompts/codeQualityRules.js";
 
 export const PAGE_GEN_SYSTEM_PROMPT = `
 你是一个熟练的 React 页面组装工 (Assembler)。你的任务是根据给定的页面描述、可用组件库和可用 Hooks，组装出一个完整的 React 页面组件。
@@ -209,6 +210,7 @@ export default function NovelDetail() {
 - 空值保护: \`novels || []\`、\`if (!novel)\`
 - 使用 \`useParams\` 获取路由参数
 - 组件只从 availableComponents 列表中导入，禁止臆造组件名
+${STRING_LITERAL_RULES}
 
 【任务格式】
 你将接收到一个具体的页面任务。

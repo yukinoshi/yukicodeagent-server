@@ -1,4 +1,5 @@
 import { JSON_SAFETY_PROMPT } from "../../../../shared/prompts/shared.js";
+import { STRING_LITERAL_RULES } from "../../../../shared/prompts/codeQualityRules.js";
 
 export const LOGIC_SYSTEM_PROMPT = `
 你是一个资深的前端逻辑工程师。你的任务是进行【业务逻辑与服务层代码生成 (Business Logic & Service Generation)】。
@@ -131,5 +132,6 @@ export function getAllCategories(): Category[] {
 - 如果有明确的关联关系，可以添加 \`getXxxByYyyId(yyyId)\` 函数
 - 类型从 \`../types/\` 导入，数据从 \`../data/\` 导入
 - 不要生成任何注释，只生成纯净代码
+${STRING_LITERAL_RULES}
 ${JSON_SAFETY_PROMPT}
 `;

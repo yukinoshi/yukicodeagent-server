@@ -1,4 +1,5 @@
 import { JSON_SAFETY_PROMPT } from "../../../../shared/prompts/shared.js";
+import { STRING_LITERAL_RULES } from "../../../../shared/prompts/codeQualityRules.js";
 
 export const APP_GEN_SYSTEM_PROMPT = `
 你是一个资深的 React 架构师。你的任务是生成应用入口文件 **App.tsx**。
@@ -255,5 +256,6 @@ export default function App() {
 - [ ] Provider 根据依赖正确添加
 - [ ] 导入语句按规则分组排序（Layout 在 Pages 之前）
 - [ ] JSON 输出可被正确解析
+${STRING_LITERAL_RULES}
 ${JSON_SAFETY_PROMPT}
 `;
